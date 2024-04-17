@@ -2,7 +2,7 @@ import "../globals.css";
 
 export const metadata = {
   title: "Lexardi Lab",
-  description: "Generating ideas",
+  description: " ",
 };
 
 export default function RootLayout({ children }) {
