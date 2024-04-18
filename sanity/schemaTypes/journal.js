@@ -9,8 +9,50 @@ export const journal = {
       type: "string",
     },
     {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+    },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+    },
+
+    {
       name: "image",
       title: "Main Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "introimage",
+      title: "Intro Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "firstimage",
+      title: "First Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "secondimage",
+      title: "Second Image",
       type: "image",
       options: {
         hotspot: true, // Allows selecting a hotspot for cropping
@@ -23,18 +65,15 @@ export const journal = {
       type: "array",
       of: [{ type: "image" }],
     },
-    {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
-    },
+
     {
       name: "description",
       title: "Description",
+      type: "text",
+    },
+    {
+      name: "descriptionOne",
+      title: "Description One",
       type: "text",
     },
   ],
