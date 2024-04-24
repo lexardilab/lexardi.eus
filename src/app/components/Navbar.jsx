@@ -22,9 +22,11 @@ export default function BasicMenu() {
         <h1 className={`${roboto_mono.className} text-sm text-black px-2`}>
           Marca
         </h1>
-        <h1 className={`${roboto_mono.className} text-sm text-black`}>
-          Journal
-        </h1>
+        <Link href="/journal">
+          <h1 className={`${roboto_mono.className} text-sm text-black`}>
+            Journal
+          </h1>
+        </Link>
       </div>
     </div>
   );
