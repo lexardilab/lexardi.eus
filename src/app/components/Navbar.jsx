@@ -1,22 +1,8 @@
-"use client";
-import * as React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import { montserrat, roboto_mono } from "../utils/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function BasicMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <div className="flex items-center justify-between px-6 py-4">
       <div>
