@@ -29,6 +29,33 @@ export const product = {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: "firstimage",
+      title: "First Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "secondimage",
+      title: "Second Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "thirdimage",
+      title: "Third Image",
+      type: "image",
+      options: {
+        hotspot: true, // Allows selecting a hotspot for cropping
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "extraImages",
       title: "Extra Images",
       type: "array",
@@ -40,6 +67,16 @@ export const product = {
       title: "Description",
       type: "text",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "descriptionOne",
+      title: "Description One",
+      type: "text",
+    },
+    {
+      name: "descriptionTwo",
+      title: "Description Two",
+      type: "text",
     },
     {
       name: "price",
