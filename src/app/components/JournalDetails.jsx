@@ -5,7 +5,7 @@ import { montserrat, roboto_mono } from "../utils/fonts";
 export default function JournalDetails({ journal }) {
   return (
     <>
-      <div className="flex items-center justify-center pt-24">
+      <div className="flex items-center justify-center pt-20">
         <h1 className={`${roboto_mono.className} text-4xl`}>
           {journal?.title}
         </h1>
