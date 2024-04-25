@@ -107,10 +107,10 @@ export default function ProductDetails({ product }) {
               case "Opal":
                 return (
                   <div
+                    key={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
-                    key={color}
                     className={`${
                       color == selectedColor ? "border-2 border-black" : ""
                     } w-10 h-10 rounded-full bg-[#a09e9c] cursor-pointer`}
@@ -119,10 +119,10 @@ export default function ProductDetails({ product }) {
               case "Black":
                 return (
                   <div
+                    key={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
-                    key={color}
                     className={`${
                       color == selectedColor ? "border-2 border-black" : ""
                     } w-10 h-10 rounded-full bg-[#2a2b2d] cursor-pointer `}
@@ -131,10 +131,10 @@ export default function ProductDetails({ product }) {
               case "Blue":
                 return (
                   <div
+                    key={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
-                    key={color}
                     className={`${
                       color == selectedColor ? "border-2 border-black" : ""
                     } w-10 h-10 rounded-full bg-blue-800 cursor-pointer `}
@@ -143,10 +143,10 @@ export default function ProductDetails({ product }) {
               default:
                 return (
                   <div
+                    key={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
-                    key={color}
                     className={`${
                       color == selectedColor ? "border-2 border-black" : ""
                     } w-10 h-10 rounded-full bg-gray-300 cursor-pointer  border-black`}
@@ -161,10 +161,10 @@ export default function ProductDetails({ product }) {
                 case "S":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center "
@@ -177,10 +177,10 @@ export default function ProductDetails({ product }) {
                 case "M":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
@@ -193,10 +193,10 @@ export default function ProductDetails({ product }) {
                 case "L":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
@@ -209,10 +209,10 @@ export default function ProductDetails({ product }) {
                 case "XL":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
@@ -225,10 +225,10 @@ export default function ProductDetails({ product }) {
                 case "XXL":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
@@ -241,10 +241,10 @@ export default function ProductDetails({ product }) {
                 case "Unica":
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
@@ -257,10 +257,10 @@ export default function ProductDetails({ product }) {
                 default:
                   return (
                     <div
+                      key={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
-                      key={size}
                       className={`${
                         size == selectedSize
                           ? "border-2 border-black flex items-center justify-center"
