@@ -2,20 +2,7 @@
 import Image from "next/image";
 import "../globals.css";
 import { montserrat, roboto_mono } from "../utils/fonts";
-import { useState } from "react";
 export default function ProductDetails({ product }) {
-  const [selectedColor, setSelectedColor] = useState(product?.colors[0]);
-  const [selectedSize, setSelectedSize] = useState(product?.sizes[0]);
-  const [qty, setQty] = useState(1);
-  const handleAddToCart = () => {
-    addToCart({
-      product,
-      quantity: qty,
-      color: selectedColor,
-      size: selectedSize,
-    });
-    toast.success("Added to cart");
-  };
   return (
     <>
       <div className="flex items-center justify-center pt-20">
