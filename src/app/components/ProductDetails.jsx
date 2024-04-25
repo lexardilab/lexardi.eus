@@ -261,7 +261,7 @@ export default function ProductDetails({ product }) {
                           : ""
                       } w-10 h-10 rounded-full cursor-pointer  border-2 flex items-center justify-center`}
                     >
-                      <h1>XXL</h1>
+                      <h1>U</h1>
                     </div>
                   );
                 default:
