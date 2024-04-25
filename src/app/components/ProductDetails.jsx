@@ -89,7 +89,7 @@ export default function ProductDetails({ product }) {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 px-4 py-4 ">
+      <div className="grid grid-cols-3 px-4 py-4 pb-12">
         <div className="flex items-center">
           <h1
             className={`${roboto_mono.className} pr-12 text-3xl font-bold uppercase`}
@@ -107,7 +107,8 @@ export default function ProductDetails({ product }) {
               case "Opal":
                 return (
                   <div
-                    key={color}
+                    key={color._id}
+                    color={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
@@ -119,7 +120,8 @@ export default function ProductDetails({ product }) {
               case "Black":
                 return (
                   <div
-                    key={color}
+                    key={color._id}
+                    color={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
@@ -131,7 +133,8 @@ export default function ProductDetails({ product }) {
               case "Blue":
                 return (
                   <div
-                    key={color}
+                    key={color._id}
+                    color={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
@@ -143,7 +146,8 @@ export default function ProductDetails({ product }) {
               default:
                 return (
                   <div
-                    key={color}
+                    key={color._id}
+                    color={color}
                     onClick={() => {
                       setSelectedColor(color);
                     }}
@@ -161,7 +165,8 @@ export default function ProductDetails({ product }) {
                 case "S":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -177,7 +182,8 @@ export default function ProductDetails({ product }) {
                 case "M":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -193,7 +199,8 @@ export default function ProductDetails({ product }) {
                 case "L":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -209,7 +216,8 @@ export default function ProductDetails({ product }) {
                 case "XL":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -225,7 +233,8 @@ export default function ProductDetails({ product }) {
                 case "XXL":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -241,7 +250,8 @@ export default function ProductDetails({ product }) {
                 case "Unica":
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
@@ -257,7 +267,8 @@ export default function ProductDetails({ product }) {
                 default:
                   return (
                     <div
-                      key={size}
+                      key={size._id}
+                      size={size}
                       onClick={() => {
                         setSelectedSize(size);
                       }}
