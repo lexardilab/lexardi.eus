@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-function Card({ journal }) {
+function JournalCard({ journal }) {
   return (
     <>
       <div className="">
@@ -22,4 +22,4 @@ function Card({ journal }) {
   );
 }
 
-export default Card;
+export default JournalCard;

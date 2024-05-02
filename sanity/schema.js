@@ -1,7 +1,6 @@
-import { category } from "./schemaTypes/category";
-import { product } from "./schemaTypes/product";
-import { journal } from "./schemaTypes/journal";
+import journal from "./schemasTypes/journal";
+import product from "./schemasTypes/product";
 
 export const schema = {
-  types: [product, category, journal],
+  types: [journal, product],
 };

@@ -13,7 +13,7 @@ export async function getProductBySlug(slug) {
   const product = await client.fetch(
     groq`*[_type == "product" && slug.current == $slug]{
       _id,
-      name,
+      title,
       slug,
       description,
       descriptionOne,
@@ -44,7 +44,7 @@ export async function getAllProducts() {
   const products = await client.fetch(
     groq`*[_type == "product"]{
       _id,
-      name,
+      title,
       slug,
       description,
       descriptionOne,
@@ -74,7 +74,7 @@ export async function getProducts() {
   const products = await client.fetch(
     groq`*[_type == "product"] |  [0...6] {
       _id,
-      name,
+      title,
       slug,
       description,
       descriptionOne,

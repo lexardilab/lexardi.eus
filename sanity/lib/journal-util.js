@@ -14,16 +14,13 @@ export async function getJournalBySlug(slug) {
     groq`*[_type == "journal" && slug.current == $slug]{
       _id,
       title,
-      slug,
       subtitle,
+      slug,
       description,
       descriptionOne,
       "image": image.asset->url,
       "introimage": introimage.asset->url,
-      "firstimage": firstimage.asset->url,
-      "secondimage": secondimage.asset->url,
       "slug": slug.current,
-      "extraImages": extraImages[].asset->url,
     }`,
     { slug },
     {
@@ -41,16 +38,12 @@ export async function getAllJournals() {
     groq`*[_type == "journal"]{
       _id,
       title,
-      slug,
       subtitle,
+      slug,
       description,
       descriptionOne,
       "image": image.asset->url,
-      "introimage": introimage.asset->url,
-      "firstimage": firstimage.asset->url,
-      "secondimage": secondimage.asset->url,
       "slug": slug.current,
-      "extraImages": extraImages[].asset->url,
     }`,
     {
       next: {
@@ -67,16 +60,12 @@ export async function getJournals() {
     groq`*[_type == "journal"] |  [0...6] {
       _id,
       title,
-      slug,
       subtitle,
+      slug,
       description,
       descriptionOne,
       "image": image.asset->url,
-      "introimage": introimage.asset->url,
-      "firstimage": firstimage.asset->url,
-      "secondimage": secondimage.asset->url,
       "slug": slug.current,
-      "extraImages": extraImages[].asset->url,
     }`,
     { next: { revalidateTag: 1 } } // revalidate every hour
   );

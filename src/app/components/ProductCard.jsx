@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-function Card({ product }) {
+function ProductCard({ product }) {
   return (
     <>
       <div className="px-6 pt-12 pb-2 ">
@@ -15,4 +15,4 @@ function Card({ product }) {
   );
 }
 
-export default Card;
+export default ProductCard;
