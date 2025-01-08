@@ -27,7 +27,6 @@ export default function Home() {
           Eu ipsum elit velit enim tempor minim labore voluptate incididunt anim voluptate fugiat. Lorem mollit do dolor aute ad.
         </h1>
       </div >
-
     </>
   );
 }
