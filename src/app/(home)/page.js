@@ -22,11 +22,18 @@ export default function Home() {
         />
 
       </div>
-      <div className="flex justify-center pt-6 pb-12">
-        <h1 className="text-center">Mollit et proident voluptate labore commodo cillum. Dolore mollit reprehenderit aliqua labore in aliquip fugiat mollit.<br />
-          Eu ipsum elit velit enim tempor minim labore voluptate incididunt anim voluptate fugiat. Lorem mollit do dolor aute ad.
+      <div className="flex justify-center pt-4 pb-12">
+        <h1 className="text-center font-thin text-5xl">azpitik dena sutan dabil
         </h1>
       </div >
+      <div className="grid grid-cols-4 gap-4 px-4 pb-12">
+        <div className="bg-red-200">01</div>
+        <div className="bg-blue-200">02</div>
+        <div className="bg-orange-200">03</div>
+        <div className="bg-yellow-200">04</div>
+
+      </div>
+
 
     </>
   );
