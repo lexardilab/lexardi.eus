@@ -14,6 +14,7 @@ export default function BlogCard({ post }) {
         )}
         <div className="">
           <h1 className="">{post.title}</h1>
+          <h1 className="">{post.subtitle}</h1>
         </div>
       </article>
     </Link>
