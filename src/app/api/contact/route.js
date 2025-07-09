@@ -1,21 +1,30 @@
-import sendgrid from "@sendgrid/mail";
+import { createClient } from '@sanity/client';
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const client = createClient({
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: 'production',
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN, // token con permisos de escritura
+  apiVersion: '2023-07-08',
+});
 
 export async function POST(req) {
   const { name, email, message } = await req.json();
 
   try {
-    await sendgrid.send({
-      to: process.env.CONTACT_TO_EMAIL,
-      from: process.env.CONTACT_FROM_EMAIL,
-      subject: `Nuevo mensaje de contacto de ${name}`,
-      text: `${message}\n\nEmail del remitente: ${email}`,
-    });
+    const doc = {
+      _type: 'contactMessage',
+      name,
+      email,
+      message,
+      createdAt: new Date().toISOString(),
+    };
+
+    await client.create(doc);
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (error) {
-    console.error("ERROR SENDGRID", error);
-    return new Response(JSON.stringify({ error: "Error al enviar el correo" }), { status: 500 });
+  } catch (err) {
+    console.error(err);
+    return new Response(JSON.stringify({ error: 'Error al guardar en Sanity' }), { status: 500 });
   }
 }
