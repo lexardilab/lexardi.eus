@@ -2,7 +2,7 @@
 
 import { defineType } from 'sanity'
 
-export const contactMessage = defineType({
+export const contactType = defineType({
   name: 'contactMessage',
   title: 'Mensaje de contacto',
   type: 'document',
