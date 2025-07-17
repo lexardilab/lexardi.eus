@@ -45,12 +45,11 @@ export default function Header() {
   return (
     <header className="fixed top-4 right-14 z-[9999]">
       {!scrolled ? (
-        <nav className="text-white text-lg flex gap-6 font-montserrat font-light">
+        <nav className="text-black text-lg flex gap-6 font-montserrat font-light">
           {/* Texto Menu Navbar */}
           <a href="#inicio">Inicio</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#proyectos">Journal</a>
-
           <a href="#contacto">Contacto</a>
         </nav>
       ) : (

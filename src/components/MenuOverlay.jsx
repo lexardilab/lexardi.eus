@@ -1,22 +1,25 @@
-'use client'
+"use client";
 
-import { useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Hamburger from './Hamburger' // Asegúrate de importar correctamente
-import { Instagram, Linkedin, Dribbble } from 'lucide-react'
+import { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Hamburger from "./Hamburger"; // Asegúrate de importar correctamente
+import { Instagram, Linkedin, Dribbble } from "lucide-react";
+import Link from "next/link";
 
-const navLinks = ['Inicio', 'Estudio', 'Proyectos', 'Contacto']
+const navLinks = ["Inicio", "Estudio", "Proyectos", "Contacto"];
 const socials = [
-  { href: '#', icon: <Instagram size={32} /> },
-  { href: '#', icon: <Linkedin size={32} /> },
-  { href: '#', icon: <Dribbble size={32} /> },
-]
+  { href: "#", icon: <Instagram size={32} /> },
+  { href: "#", icon: <Linkedin size={32} /> },
+  { href: "#", icon: <Dribbble size={32} /> },
+];
 
 export default function MenuOverlay({ open, setOpen }) {
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [open])
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <AnimatePresence>
@@ -37,19 +40,23 @@ export default function MenuOverlay({ open, setOpen }) {
             {/* Left: Navigation */}
             <div className="flex flex-col justify-center space-y-12">
               {navLinks.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link}
-                  href={`#${link.toLowerCase()}`}
-                  onClick={() => setOpen(false)}
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.1 }}
-                  className="text-[12vw] md:text-[6vw] font-semibold leading-none group overflow-hidden"
+                  className="overflow-hidden"
                 >
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-2 group-hover:opacity-60">
-                    {link}
-                  </span>
-                </motion.a>
+                  <Link
+                    href={link === "Inicio" ? "/" : `/${link.toLowerCase()}`}
+                    onClick={() => setOpen(false)}
+                    className="text-[12vw] md:text-[6vw] font-semibold leading-none group inline-block"
+                  >
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-2 group-hover:opacity-60">
+                      {link}
+                    </span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
 
@@ -74,13 +81,20 @@ export default function MenuOverlay({ open, setOpen }) {
                 ))}
               </div>
               <div className="px-2">
-                <p className="uppercase font-semibold text-xs tracking-wide mb-2">Email</p>
-                <a href="mailto:lexardi@lexardi.eus" className="hover:underline">lexardi@lexardi.eus</a>
+                <p className="uppercase font-semibold text-xs tracking-wide mb-2">
+                  Email
+                </p>
+                <a
+                  href="mailto:lexardi@lexardi.eus"
+                  className="hover:underline"
+                >
+                  lexardi@lexardi.eus
+                </a>
               </div>
             </motion.div>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }
