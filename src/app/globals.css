@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+html {
+    overflow-y: scroll; /* Siempre muestra scrollbar, aunque no sea necesario */
+  }
