@@ -1,7 +1,7 @@
 import { createClient } from '@sanity/client';
 
 const client = createClient({
-  projectId: process.env.SANITY_PROJECT_ID,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: 'production',
   useCdn: false,
   token: process.env.SANITY_API_TOKEN, // token con permisos de escritura
@@ -25,6 +25,6 @@ export async function POST(req) {
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (err) {
     console.error(err);
-    return new Response(JSON.stringify({ error: 'Error al guardar en Sanity' }), { status: 500 });
+    return new Response(JSON.stringify({ error: 'Error al guardar' }), { status: 500 });
   }
 }
