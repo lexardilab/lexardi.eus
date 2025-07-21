@@ -49,8 +49,8 @@ export default function Header() {
         <nav className="flex gap-6 text-lg font-light text-black font-montserrat">
           {/* Texto Menu Navbar */}
           <Link href="/">Inicio</Link>
-          <Link href="proyectos">Proyectos</Link>
-          <Link href="journal">Journal</Link>
+          <Link href="proyectos">Estudio</Link>
+          <Link href="journal">Proyectos</Link>
           <Link href="contacto">Contacto</Link>
         </nav>
       ) : (
