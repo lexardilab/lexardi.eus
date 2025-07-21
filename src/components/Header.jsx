@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Hamburger from './Hamburger'
 import MenuOverlay from './MenuOverlay'
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
+import Link from 'next/link'
 
 let lenisInstance = null
 
@@ -45,12 +46,12 @@ export default function Header() {
   return (
     <header className="fixed top-4 right-14 z-[9999]">
       {!scrolled ? (
-        <nav className="text-black text-lg flex gap-6 font-montserrat font-light">
+        <nav className="flex gap-6 text-lg font-light text-black font-montserrat">
           {/* Texto Menu Navbar */}
-          <a href="#inicio">Inicio</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#proyectos">Journal</a>
-          <a href="#contacto">Contacto</a>
+          <Link href="/">Inicio</Link>
+          <Link href="proyectos">Proyectos</Link>
+          <Link href="journal">Journal</Link>
+          <Link href="contacto">Contacto</Link>
         </nav>
       ) : (
         <Hamburger open={open} setOpen={setOpen} />

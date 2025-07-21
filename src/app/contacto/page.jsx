@@ -2,7 +2,6 @@
 import Header from '@/components/Header'  
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Accordion from '@/components/ContactAcordion'
 
 
 export default function ContactPage() {
@@ -26,11 +25,11 @@ export default function ContactPage() {
   return (
     <>
 <Header />
-      <section className="min-h-screen w-full flex flex-col md:flex-row bg-white">
+      <section className="flex flex-col w-full min-h-screen bg-white md:flex-row">
         {/* Imagen lado izquierdo */}
-        <div className="md:w-1/2 w-full overflow-hidden">
+        <div className="w-full overflow-hidden md:w-1/2">
           <motion.img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+            src="https://res.cloudinary.com/dxkxg2ivb/image/upload/v1753086813/blog.lexardi.xyz/IMG_6623_lf65pq.webp"
             alt="Imagen contacto"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -40,17 +39,17 @@ export default function ContactPage() {
         </div>
 
         {/* Formulario lado derecho */}
-        <div className="md:w-1/2 w-full bg-gray-100 flex flex-col justify-center p-16">
-          <h1 className="text-5xl font-mono font-bold mb-10 text-gray-900 leading-tight">
+        <div className="flex flex-col justify-center w-full p-16 bg-white md:w-1/2">
+          <h1 className="mb-10 font-mono text-5xl font-bold leading-tight text-gray-900">
             Contáctanos
           </h1>
-          <p className="mb-12 text-gray-700 max-w-lg font-mono text-lg leading-relaxed">
+          <p className="max-w-lg mb-12 font-mono text-lg leading-relaxed text-gray-700">
             ¿Tienes alguna pregunta o proyecto en mente? Cuéntanos y nos pondremos en contacto contigo.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-10 max-w-lg w-full font-mono">
+          <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-10 font-mono">
             <div>
-              <label htmlFor="name" className="block mb-2 text-gray-700 text-lg">Nombre</label>
+              <label htmlFor="name" className="block mb-2 text-lg text-gray-700">Nombre</label>
               <input
                 id="name"
                 name="name"
@@ -58,14 +57,14 @@ export default function ContactPage() {
                 required
                 value={form.name}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-gray-400 focus:border-black text-gray-900 text-lg py-3 placeholder-gray-500 outline-none transition"
+                className="w-full py-3 text-lg text-gray-900 placeholder-gray-500 transition bg-transparent border-b border-gray-400 outline-none focus:border-black"
                 placeholder="Tu nombre"
                 autoComplete="name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block mb-2 text-gray-700 text-lg">Email</label>
+              <label htmlFor="email" className="block mb-2 text-lg text-gray-700">Email</label>
               <input
                 id="email"
                 name="email"
@@ -73,14 +72,14 @@ export default function ContactPage() {
                 required
                 value={form.email}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-gray-400 focus:border-black text-gray-900 text-lg py-3 placeholder-gray-500 outline-none transition"
+                className="w-full py-3 text-lg text-gray-900 placeholder-gray-500 transition bg-transparent border-b border-gray-400 outline-none focus:border-black"
                 placeholder="tu@email.com"
                 autoComplete="email"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block mb-2 text-gray-700 text-lg">Mensaje</label>
+              <label htmlFor="message" className="block mb-2 text-lg text-gray-700">Mensaje</label>
               <textarea
                 id="message"
                 name="message"
@@ -88,7 +87,7 @@ export default function ContactPage() {
                 required
                 value={form.message}
                 onChange={handleChange}
-                className="w-full bg-transparent border-b border-gray-400 focus:border-black text-gray-900 text-lg py-3 placeholder-gray-500 outline-none resize-none transition"
+                className="w-full py-3 text-lg text-gray-900 placeholder-gray-500 transition bg-transparent border-b border-gray-400 outline-none resize-none focus:border-black"
                 placeholder="Escribe tu mensaje aquí..."
               />
             </div>
@@ -97,7 +96,7 @@ export default function ContactPage() {
               type="submit"
               whileTap={{ scale: 0.97 }}
               disabled={status === 'sending'}
-              className="bg-black text-white font-semibold px-12 py-4 rounded-md hover:bg-gray-900 transition max-w-max"
+              className="px-12 py-4 font-semibold text-white transition bg-black rounded-md hover:bg-gray-900 max-w-max"
             >
               {status === 'sending' ? 'Enviando...' :
                status === 'success' ? '¡Enviado!' :
@@ -107,7 +106,6 @@ export default function ContactPage() {
           </form>
         </div>
       </section>
-      <Accordion />
     </>
   )
 }

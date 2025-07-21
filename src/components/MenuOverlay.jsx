@@ -3,14 +3,14 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "./Hamburger"; // Asegúrate de importar correctamente
-import { Instagram, Linkedin, Dribbble } from "lucide-react";
+import { FaInstagram, FaLinkedinIn, FaBehance } from "react-icons/fa";
 import Link from "next/link";
 
 const navLinks = ["Inicio", "Estudio", "Proyectos", "Contacto"];
 const socials = [
-  { href: "#", icon: <Instagram size={32} /> },
-  { href: "#", icon: <Linkedin size={32} /> },
-  { href: "#", icon: <Dribbble size={32} /> },
+  { href: "https://instagram.com", icon: <FaInstagram size={28} /> },
+  { href: "https://behance.net", icon: <FaBehance size={28} /> },
+  { href: "https://linkedin.com", icon: <FaLinkedinIn size={28} /> },
 ];
 
 export default function MenuOverlay({ open, setOpen }) {
@@ -25,7 +25,7 @@ export default function MenuOverlay({ open, setOpen }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 bg-white text-black z-50 px-8 md:px-20 py-16"
+          className="fixed inset-0 z-50 px-8 py-16 text-black bg-white md:px-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -36,7 +36,7 @@ export default function MenuOverlay({ open, setOpen }) {
             <Hamburger open={open} setOpen={setOpen} color="black" />
           </div>
 
-          <div className="grid md:grid-cols-2 h-full gap-12">
+          <div className="grid h-full gap-12 md:grid-cols-2">
             {/* Left: Navigation */}
             <div className="flex flex-col justify-center space-y-12">
               {navLinks.map((link, i) => (
@@ -74,14 +74,14 @@ export default function MenuOverlay({ open, setOpen }) {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-2 uppercase text-xs tracking-wider hover:opacity-60 transition"
+                    className="flex items-center px-2 text-xs tracking-wider uppercase transition hover:opacity-60"
                   >
                     {icon}
                   </a>
                 ))}
               </div>
               <div className="px-2">
-                <p className="uppercase font-semibold text-xs tracking-wide mb-2">
+                <p className="mb-2 text-xs font-semibold tracking-wide uppercase">
                   Email
                 </p>
                 <a
