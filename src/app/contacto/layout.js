@@ -1,6 +1,5 @@
 import "../globals.css";
-import LogoScroll from "@/components/LogoScroll";
-
+import MetricoolScript from "../../components/MetricoolScript";
 
 export const metadata = {
   title: "Lexardi Lab",
@@ -11,8 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-                  <LogoScroll />
-                  {children}
+        <MetricoolScript />
+        {children}
       </body>
     </html>
   );
