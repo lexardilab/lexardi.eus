@@ -1,8 +1,8 @@
 export const metadata = {
-  title: "Lexardi Lab | Studio",
+  title: "Lexardi Lab | Projects",
   description: " ",
 };
 
-export default function StudioLayout({ children }) {
+export default function ProjectsLayout({ children }) {
   return <>{children}</>; // solo children, sin html/body
 }

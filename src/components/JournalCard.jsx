@@ -12,7 +12,7 @@ export default function BlogCard({ post }) {
             className=""
           />
         )}
-        <div className="">
+        <div className="grid grid-cols-2">
           <h1 className="">{post.title}</h1>
           <h1 className="">{post.subtitle}</h1>
         </div>

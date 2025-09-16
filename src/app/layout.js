@@ -1,7 +1,7 @@
-import "../globals.css";
-import MetricoolScript from "../../components/MetricoolScript";
+import "./globals.css";
+import MetricoolScript from "../components/MetricoolScript";
 import { Lora, Montserrat } from "next/font/google";
-import Footer from "../../components/Footer";
+import Footer from "../components/Footer";
 
 const lora = Lora({
   subsets: ["latin"],

@@ -1,7 +1,8 @@
-import {blockContentType} from './blockContentType'
-import {postType} from './postType'
-import {contactType} from './contactType'
+import { blockContentType } from "./blockContentType";
+import { galleryImageType } from "./galleryImageType";
+import { postType } from "./postType";
+import { projectType } from "./projectType";
 
 export const schema = {
-  types: [blockContentType, postType, contactType],
-}
+  types: [blockContentType, postType, projectType, galleryImageType],
+};
