@@ -69,6 +69,7 @@ export default async function ProjectsPage() {
           })}
         </ul>
       </main>
+      <div className="flex h-screen bg-red-100">prueba</div>
     </div>
   );
 }
