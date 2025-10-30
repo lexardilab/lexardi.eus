@@ -12,11 +12,19 @@ export default function BlogCard({ post }) {
             className=""
           />
         )}
+<<<<<<< HEAD
         <div className="">
+=======
+        <div className="grid grid-cols-2">
+>>>>>>> dev
           <h1 className="">{post.title}</h1>
           <h1 className="">{post.subtitle}</h1>
         </div>
       </article>
     </Link>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dev
