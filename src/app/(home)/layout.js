@@ -1,23 +1,6 @@
 import "../globals.css";
 import MetricoolScript from "../../components/MetricoolScript";
-<<<<<<< HEAD
 import { Montserrat } from "next/font/google";
-=======
-import { Lora, Montserrat } from "next/font/google";
-import Footer from "../../components/Footer";
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-montserrat",
-});
->>>>>>> dev
 
 export const metadata = {
   title: "Lexardi Lab",
@@ -33,18 +16,10 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }) {
   return (
-<<<<<<< HEAD
     <html lang="es">
       <body className={`${montserrat.variable} font-sans`}>
         <MetricoolScript />
         {children}
-=======
-    <html lang="es" className={`${lora.variable} ${montserrat.variable}`}>
-      <body>
-        <MetricoolScript />
-        {children}
-        <Footer />
->>>>>>> dev
       </body>
     </html>
   );
