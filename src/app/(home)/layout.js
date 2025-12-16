@@ -1,6 +1,8 @@
 import "../globals.css";
 import MetricoolScript from "../../components/MetricoolScript";
 import { Montserrat } from "next/font/google";
+import HeroTwo from "@/components/HeroTwo";
+import HeroThree from "@/components/HeroThree";
 
 export const metadata = {
   title: "Lexardi Lab",
@@ -20,6 +22,8 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.variable} font-sans`}>
         <MetricoolScript />
         {children}
+        <HeroTwo />
+        <HeroThree />
       </body>
     </html>
   );

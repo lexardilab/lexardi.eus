@@ -8,9 +8,7 @@ const images = [
   "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1739343501/harri.cc/Camiseta%20Azpitik/ToteBorobil_umlcdy.webp",
   "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1739350386/harri.cc/Camiseta%20Azpitik/DSCF0119_vsisb3.webp",
   "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1675592455/gaizka.me/landscape/GBV-TORLANDA-051-2_sujojb.webp",
-  "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1670849102/lexardi-shop/Notebooks/L-JPN-003/L-JPN-003A_wyvwfa.webp",
   "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1675546685/gaizka.me/misc/misc-8_zq8nmh.webp",
-  "https://res.cloudinary.com/dxkxg2ivb/image/upload/v1746530136/harri.cc/Sudadera_Erro_RedBrown_aznift.webp"
 ];
 
 export default function ImageSlideshow() {
