@@ -1,4 +1,5 @@
 import "../globals.css";
+import { montserrat, lora, poppins } from '../../lib/fonts';
 import MetricoolScript from "../../components/MetricoolScript";
 import { Montserrat } from "next/font/google";
 import HeroTwo from "@/components/HeroTwo";
@@ -9,17 +10,11 @@ export const metadata = {
   description: "Estudio de diseño, y hacermos más cosas... ",
 };
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.variable} font-sans`}>
+      <body className={`${montserrat.variable} font-montserrat`}>
         <MetricoolScript />
         {children}
         <HeroTwo />
