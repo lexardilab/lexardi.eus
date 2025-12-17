@@ -1,7 +1,6 @@
 const HeroTwo = () => {
   return (
-    <div className="flex items-center justify-center bg-red-100 h-screen">
-      prueba
+    <div className="flex items-center justify-center bg-gray-700 h-screen">
     </div>
   );
 }
