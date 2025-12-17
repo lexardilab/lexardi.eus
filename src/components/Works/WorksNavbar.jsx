@@ -12,6 +12,7 @@ const WorksNavbar = () => {
       <div className="pt-6 pl-6">
         <Link href="/works/errari"><h1>Errari</h1></Link>
         <Link href="/works/emak-bakia"><h1>Emak Bakia</h1></Link>
+        <Link href="/works/nebra"><h1>Nebra</h1></Link>
       </div>
     </nav>
   );
