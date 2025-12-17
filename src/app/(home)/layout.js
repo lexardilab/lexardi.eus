@@ -3,6 +3,9 @@ import { montserrat, lora, poppins } from "../../lib/fonts";
 import MetricoolScript from "../../components/MetricoolScript";
 import HeroTwo from "@/components/Home/HeroTwo";
 import HeroThree from "@/components/Home/HeroThree";
+import "swiper/css";
+import "swiper/css/navigation";
+
 
 export const metadata = {
   title: "Lexardi Lab",

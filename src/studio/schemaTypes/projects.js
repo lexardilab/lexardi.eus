@@ -1,53 +1,52 @@
 // sanity/schemaTypes/project.ts
-import { defineType, defineField } from "sanity";
+import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: "project",
-  title: "Project",
-  type: "document",
+  name: 'project',
+  title: 'Project',
+  type: 'document',
   fields: [
     defineField({
-      name: "title",
-      title: "Title",
-      type: "string",
+      name: 'title',
+      title: 'Title',
+      type: 'string',
       validation: (Rule) => Rule.required(),
     }),
 
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
       options: {
-        source: "title",
+        source: 'title',
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
     }),
 
     defineField({
-      name: "excerpt",
-      title: "Excerpt",
-      type: "text",
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
       rows: 3,
     }),
 
     defineField({
-      name: "body",
-      title: "Content",
-      type: "array",
-      of: [{ type: "block" }],
+      name: 'body',
+      title: 'Content',
+      type: 'blockContent', // 🔑 usa el blockContent, no solo block
     }),
 
     defineField({
-      name: "gallery",
-      title: "Gallery",
-      type: "array",
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'array',
       of: [
         defineField({
-          type: "image",
-          options: { hotspot: true },
+          type: 'image',
+          options: {hotspot: true},
         }),
       ],
     }),
   ],
-});
+})
