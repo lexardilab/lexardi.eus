@@ -1,7 +1,7 @@
-import ProjectNavbar from "@/components/Projects/ProjectNavbar";
+import WorksNavbar from "@/components/Works/WorksNavbar";
 import "../globals.css";
 export const metadata = {
-  title: "Lexardi Lab | Projects",
+  title: "Lexardi Lab | Works",
   description: "Estudio de diseño",
 };
 
@@ -9,8 +9,8 @@ export default function Layout({ children }) {
   return (
     <html lang="es">
       <body>
-        <ProjectNavbar />
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }

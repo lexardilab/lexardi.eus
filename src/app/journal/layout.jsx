@@ -10,7 +10,8 @@ export default function Layout({ children }) {
     <html lang="es">
       <body>
         <ProjectNavbar />
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }

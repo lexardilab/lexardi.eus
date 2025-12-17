@@ -1,8 +1,8 @@
 import "../globals.css";
 import { montserrat, lora, poppins } from "../../lib/fonts";
 import MetricoolScript from "../../components/MetricoolScript";
-import HeroTwo from "@/components/HeroTwo";
-import HeroThree from "@/components/HeroThree";
+import HeroTwo from "@/components/Home/HeroTwo";
+import HeroThree from "@/components/Home/HeroThree";
 
 export const metadata = {
   title: "Lexardi Lab",
