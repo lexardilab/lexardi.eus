@@ -1,15 +1,13 @@
 import "../globals.css";
 import { montserrat, lora, poppins } from "../../lib/fonts";
 import MetricoolScript from "../../components/MetricoolScript";
-import HeroTwo from "@/components/Home/HeroTwo";
-import HeroThree from "@/components/Home/HeroThree";
 import "swiper/css";
 import "swiper/css/navigation";
 
 
 export const metadata = {
-  title: "Lexardi Lab",
-  description: "Estudio de diseño, y hacemos más cosas...",
+  title: "Lexardi Lab | Estudio de diseño estratégico y branding",
+  description: "Lexardi Lab | Elevando marcas a través del diseño conceptual. Especialistas en identidad visual, branding y soluciones creativas con un enfoque estratégico.",
 };
 
 export default function RootLayout({ children }) {
@@ -21,8 +19,6 @@ export default function RootLayout({ children }) {
       <body className="font-montserrat">
         <MetricoolScript />
         {children}
-        <HeroTwo />
-        <HeroThree />
       </body>
     </html>
   );
