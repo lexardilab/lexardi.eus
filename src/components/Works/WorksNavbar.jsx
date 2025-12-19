@@ -20,6 +20,9 @@ const WorksNavbar = () => {
         <Link href="/works/nebra">
           <h1>Nebra</h1>
         </Link>
+        <Link href="/works/nebra">
+          <h1>Gu</h1>
+        </Link>
       </div>
       <div className="pt-24 pl-6">
         <Link href="/journal">

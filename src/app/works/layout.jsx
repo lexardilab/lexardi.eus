@@ -1,4 +1,3 @@
-import WorksNavbar from "@/components/Works/WorksNavbar";
 import "../globals.css";
 export const metadata = {
   title: "Lexardi Lab | Works",
