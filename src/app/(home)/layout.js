@@ -6,8 +6,8 @@ import "swiper/css/navigation";
 
 
 export const metadata = {
-  title: "Lexardi Lab | Estudio de diseño estratégico y branding",
-  description: "Lexardi Lab | Elevando marcas a través del diseño conceptual. Especialistas en identidad visual, branding y soluciones creativas con un enfoque estratégico.",
+  title: "Lexardi Lab | Estudio de diseño",
+  description: "Lexardi Lab | Estudio de diseño estratégico y branding",
 };
 
 export default function RootLayout({ children }) {

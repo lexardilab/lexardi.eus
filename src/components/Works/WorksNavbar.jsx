@@ -15,7 +15,7 @@ const WorksNavbar = () => {
           <h1>Errari</h1>
         </Link>
         <Link href="/works/emak-bakia">
-          <h1>Emak Bakia</h1>
+          <h1>Emak Bakia!</h1>
         </Link>
         <Link href="/works/nebra">
           <h1>Nebra</h1>
