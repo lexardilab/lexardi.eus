@@ -3,6 +3,7 @@ import { montserrat, lora, poppins } from "../../lib/fonts";
 import MetricoolScript from "../../components/MetricoolScript";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Analytics } from "@vercel/analytics/next"
 
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
     >
       <body className="font-montserrat">
         <MetricoolScript />
+        <Analytics/>
         {children}
       </body>
     </html>
