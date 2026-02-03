@@ -73,9 +73,7 @@ export default function ImageSlideshow() {
       </div>
 
       {/* Texto inferior izquierda: teléfono */}
-      <div className="absolute bottom-16 left-10 text-sm sm:text-base font-light tracking-wide">
-        <p className="font-black">+34 688 843 213</p>
-      </div>
+      
 
       {/* Texto inferior derecha: email con mailto */}
       <div className="absolute bottom-16 right-10 text-sm sm:text-base font-light tracking-wide">

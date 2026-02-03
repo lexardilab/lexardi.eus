@@ -1,4 +1,3 @@
-import "../globals.css";
 export const metadata = {
   title: "Lexardi Lab | Works",
   description: "Estudio de diseño",

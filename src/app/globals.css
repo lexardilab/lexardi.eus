@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  /* Fuentes */
+  --font-lora: var(--font-lora);
+  --font-montserrat: var(--font-montserrat);
+  --font-poppins: var(--font-poppins);
+  --font-grotesk: var(--font-grotesk);
+
+
+}
+
+/* Borra lo anterior y pon esto al final de tu globals.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Ocultar barra en Firefox */
+  scrollbar-width: none !important;
+  /* Ocultar barra en IE/Edge */
+  -ms-overflow-style: none !important;
+}
+
+/* Ocultar barra en Chrome, Safari y todos los basados en Webkit */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}

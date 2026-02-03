@@ -86,7 +86,7 @@ export default function ProjectPage() {
   return (
     <div className="px-4 pb-6">
       <div className="flex items-center mx-auto pt-12">
-        <h1 className="text-3xl font-bold mb-6">{project.title}</h1>
+        <h1 className="text-3xl font-bold mb-6 text-[#1d1d1d]">{project.title}</h1>
       </div>
 
       {/* Body enriquecido */}

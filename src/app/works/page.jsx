@@ -3,7 +3,7 @@ import WorksNavbar from "@/components/Works/WorksNavbar";
 export default function Projects() {
   return (
     <>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 bg-[#e0ddd4] h-screen">
         <div className="col-span-1">
           <WorksNavbar />
         </div>
