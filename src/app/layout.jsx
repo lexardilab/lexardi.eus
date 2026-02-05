@@ -1,8 +1,13 @@
 import "./globals.css";
-import { Montserrat, Lora, Poppins, Space_Grotesk } from 'next/font/google'; 
+import { Montserrat, Lora, Poppins, Space_Grotesk, Albert_Sans } from 'next/font/google'; 
 import { Analytics } from "@vercel/analytics/next";
 
 // 1. Configuramos cada fuente
+const albert = Albert_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-albert", // ESTO ES CLAVE
+});
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -94,7 +99,7 @@ export default function RootLayout({ children }) {
     <html 
       lang="es" 
       // 2. Inyectamos todas las variables en el HTML
-      className={`${montserrat.variable} ${lora.variable} ${poppins.variable} ${spaceGrotesk.variable}`}
+      className={`${montserrat.variable} ${lora.variable} ${poppins.variable} ${spaceGrotesk.variable} ${albert.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased font-montserrat">

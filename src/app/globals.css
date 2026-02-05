@@ -5,7 +5,7 @@
   --font-montserrat: var(--font-montserrat);
   --font-poppins: var(--font-poppins);
   --font-grotesk: var(--font-grotesk);
-}
+  --font-albert: var(--font-albert);}
 
 /* 1. Reset de scroll nativo (Garantiza que SIEMPRE funcione) */
 html, body {

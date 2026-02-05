@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Lexardi Lab | Projects",
+  title: "Lexardi Lab | Pruebas",
   description: "Estudio de diseño",
 };
 

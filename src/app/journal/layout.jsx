@@ -1,4 +1,4 @@
-import ProjectNavbar from "@/components/Projects/ProjectNavbar";
+import JournalNavbar from "@/components/Journal/JournalNavbar";
 export const metadata = {
   title: "Lexardi Lab | Projects",
   description: "Estudio de diseño",
@@ -6,9 +6,9 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-      <div>
-        <ProjectNavbar />
+      <>
+        <JournalNavbar/>
         {children}
-    </div>
+    </>
   );
 }

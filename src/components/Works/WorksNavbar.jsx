@@ -21,11 +21,13 @@ const WorksNavbar = () => {
         </div>
 
         <div className="pt-12 pl-6">
+          <Link href="/works">
           <h1
             className="text-3xl font-grotesk pb-2 text-[#1d1d1d]"
           >
             Works
           </h1>
+          </Link>
           <Link href="/works/errari">
             <h1 className="font-grotesk text-xl text-[#1d1d1d]">Errari</h1>
           </Link>
@@ -43,6 +45,9 @@ const WorksNavbar = () => {
         <div className="pt-24 pl-6">
           <Link href="/journal">
             <h1 className="font-space-grotesk text-xl text-[#1d1d1d]">journal</h1>
+          </Link>
+          <Link href="/projects">
+            <h1 className="font-space-grotesk text-xl text-[#1d1d1d]">projects</h1>
           </Link>
           <Link href="/contact">
             <h1 className="font-space-grotesk text-xl text-[#1d1d1d]">contact</h1>
